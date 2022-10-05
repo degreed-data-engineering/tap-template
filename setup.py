@@ -22,7 +22,7 @@ setup(name="tap-template",
       },
       entry_points="""
           [console_scripts]
-          tap-template=tap_template:main
+          tap-template=tap_template:master
       """,
       packages=["tap_template"],
       package_data = {
