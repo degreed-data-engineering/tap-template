@@ -1,0 +1,20 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: tap-template
+plugins:
+  extractors:
+  - name: tap-template
+    namespace: tap_template
+    pip_url: -e .
+    capabilities:
+    - state
+    - catalog
+    - discover
+    config:
+      api_url: https://degreed.zendesk.com
+      api_key: ZGF0YS1lbmdpbmVlcmluZ0BkZWdyZWVkLmNvbS90b2tlbjozaTZ5aDhTaU9HV1phMnpuNW5idjRWMnJBcGZ0UmtQZkI3SkxiZ2dy
+      start_date: '2010-01-01T00:00:00Z'
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl
